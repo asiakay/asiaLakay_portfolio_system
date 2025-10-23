@@ -5,6 +5,9 @@ A lightweight, Cloudflare-native portfolio system that serves dynamic content wi
 ## 🌐 Overview
 This system runs entirely on Cloudflare Pages and Workers, using KV Storage for dynamic data like contact forms or project submissions. It’s modular, low-cost, and serverless — perfect for scaling a personal site or multi-portfolio network.
 
+### Live Example
+- [Deeds](https://deeds.asialakay.com) — Real-world deployment showcasing the portfolio system in production.
+
 ## ⚙️ Architecture
 ```
 public/         → Static assets (HTML, CSS, JS)
