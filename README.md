@@ -33,6 +33,13 @@ scripts/        → Build/deploy scripts
 
 ---
 
+## ▶️ Local development
+If access to the npm registry is restricted you can run the bundled static server:
+```bash
+node scripts/dev-server.js [directory] --port=4173
+```
+This mirrors `npx serve` by defaulting to the `public/` directory.
+
 ## 🛠 Setup
 ```bash
 # Clone repo

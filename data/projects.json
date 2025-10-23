@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Workers API",
+    "summary": "Edge-rendered contact form that persists submissions to Cloudflare KV.",
+    "stack": ["Cloudflare Workers", "KV Storage"],
+    "link": "https://workers.cloudflare.com/"
+  },
+  {
+    "title": "Automation Pipeline",
+    "summary": "Scheduled task that syncs GitHub repositories into the portfolio data store.",
+    "stack": ["Wrangler", "Cron Triggers"],
+    "link": "https://developers.cloudflare.com/workers/platform/cron-triggers/"
+  },
+  {
+    "title": "Pages Frontend",
+    "summary": "Static site delivered via Cloudflare Pages with dynamic content hydration.",
+    "stack": ["HTML", "CSS", "Vanilla JS"],
+    "link": "https://developers.cloudflare.com/pages/"
+  }
+]
