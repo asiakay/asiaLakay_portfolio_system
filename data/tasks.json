@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Day 1 – Cloudflare Worker setup with KV and static assets",
+    "theme": "Setup",
+    "summary": "Initialize the Worker project, configure Wrangler, and validate KV connectivity.",
+    "steps": [
+      "Initialize the Worker project (Wrangler + npm) and create folders for worker code, static assets, and utilities.",
+      "Generate wrangler.toml with Worker name, routes, KV binding (e.g., DEEDS_KV), and durable object placeholders.",
+      "Add static hosting configuration for the public site within wrangler.toml.",
+      "Run wrangler dev locally to confirm the Worker boots and the KV binding is accessible."
+    ]
+  },
+  {
+    "title": "Day 2 – HTML/JS frontend calling Worker endpoints",
+    "theme": "Frontend",
+    "summary": "Build the public landing page with auth forms wired to Worker APIs.",
+    "steps": [
+      "Implement landing page views for login and signup forms using vanilla JS or a lightweight framework.",
+      "Connect the forms to Worker endpoints (/api/register and /api/login) via fetch calls.",
+      "Add basic client-side validation, loading states, and inline error messaging.",
+      "Configure static asset deployment through Wrangler publish to verify end-to-end wiring."
+    ]
+  },
+  {
+    "title": "Day 3 – Worker auth routes with hashing and validation",
+    "theme": "Authentication",
+    "summary": "Create secure registration and login logic in the Worker.",
+    "steps": [
+      "Implement Worker handlers for /api/register and /api/login routes.",
+      "Hash passwords with SubtleCrypto SHA-256 before writing to KV.",
+      "Validate inputs (email format, password strength) and sanitize user-provided fields.",
+      "Persist user objects in DEEDS_KV and return structured success or error responses."
+    ]
+  },
+  {
+    "title": "Day 4 – Environment variable management",
+    "theme": "Configuration",
+    "summary": "Manage secrets and salts for local and production environments.",
+    "steps": [
+      "Define required secrets (hash salts, JWT secret) in wrangler.toml and the Cloudflare dashboard.",
+      "Update Worker logic to consume environment variables securely.",
+      "Document local development workflow using .dev.vars for secret injection.",
+      "Confirm sensitive values are excluded from version control."
+    ]
+  },
+  {
+    "title": "Day 5 – Read APIs for user data",
+    "theme": "API",
+    "summary": "Expose endpoints that surface user profiles from KV.",
+    "steps": [
+      "Add /api/users route that returns all users from KV with admin-only access controls.",
+      "Implement /api/user/:email route with authorization guardrails.",
+      "Standardize JSON response schema and centralized error handling.",
+      "Handle KV pagination or result limits to prepare for dataset growth."
+    ]
+  },
+  {
+    "title": "Day 6 – JWT sessions and profile updates",
+    "theme": "Sessions",
+    "summary": "Introduce authenticated sessions and user profile updates.",
+    "steps": [
+      "Issue JWTs or signed session cookies during login.",
+      "Build middleware that validates tokens on protected endpoints.",
+      "Create an endpoint to update profile attributes (bio, avatar URL) stored in KV.",
+      "Implement token expiration and refresh handling."
+    ]
+  },
+  {
+    "title": "Day 7 – Tailwind dashboard and client routing",
+    "theme": "UX",
+    "summary": "Polish the authenticated dashboard experience.",
+    "steps": [
+      "Integrate Tailwind (CLI or CDN) to style the dashboard layout.",
+      "Render logged-in dashboard view that hydrates user info from /api/user/:email.",
+      "Add client-side routing for login, signup, and profile pages.",
+      "Implement responsive header/footer and dynamic success or error alerts."
+    ]
+  },
+  {
+    "title": "Day 8 – Security enhancements",
+    "theme": "Security",
+    "summary": "Harden authentication surfaces and add rate limiting.",
+    "steps": [
+      "Introduce Worker middleware that rate-limits /api/auth requests.",
+      "Enhance password protection with salted hashing via SubtleCrypto or PBKDF2.",
+      "Expand input sanitization to mitigate XSS and injection vectors.",
+      "Set up a cron or scheduled Worker stub for KV backups."
+    ]
+  },
+  {
+    "title": "Day 9 – Analytics logging and visualization",
+    "theme": "Analytics",
+    "summary": "Track usage metrics and surface them in the dashboard.",
+    "steps": [
+      "Log signup and login events with timestamps to a Cloudflare D1 table.",
+      "Implement /api/metrics endpoint that returns aggregate stats (user counts, daily active sessions).",
+      "Build a front-end analytics view using Chart.js that consumes the metrics API.",
+      "Integrate Cloudflare Turnstile on the signup form to deter bots."
+    ]
+  },
+  {
+    "title": "Day 10 – Community features and cleanup automation",
+    "theme": "Launch",
+    "summary": "Finalize onboarding, feedback, email verification, and cleanup.",
+    "steps": [
+      "Create onboarding prompts and sample data seeded after registration.",
+      "Add feedback form that stores submissions in a secondary KV namespace.",
+      "Implement email verification flow using MailChannels Worker API for send + confirm steps.",
+      "Configure scheduled Worker to purge inactive profiles weekly and finalize launch checklist."
+    ]
+  }
+]
