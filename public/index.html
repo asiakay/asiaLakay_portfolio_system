@@ -12,6 +12,52 @@
         <h1>asiaLakay Portfolio System</h1>
         <p>A Cloudflare-native, content-driven portfolio starter.</p>
       </header>
+      <section class="tone-card" id="tone-app">
+        <h2>Browser Tone Playground</h2>
+        <p>
+          Experiment with generating a simple tone right in your browser. Adjust the
+          waveform, frequency, and volume, then start or stop the sound whenever you
+          like.
+        </p>
+        <div class="tone-controls">
+          <label class="tone-control">
+            <span>Waveform</span>
+            <select data-control="waveform">
+              <option value="sine">Sine</option>
+              <option value="square">Square</option>
+              <option value="sawtooth">Sawtooth</option>
+              <option value="triangle">Triangle</option>
+            </select>
+          </label>
+          <label class="tone-control">
+            <span>Frequency: <strong data-frequency-label>440 Hz</strong></span>
+            <input
+              type="range"
+              min="110"
+              max="880"
+              value="440"
+              step="1"
+              data-control="frequency"
+            />
+          </label>
+          <label class="tone-control">
+            <span>Volume: <strong data-volume-label>60%</strong></span>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="60"
+              step="1"
+              data-control="volume"
+            />
+          </label>
+        </div>
+        <div class="tone-actions">
+          <button type="button" data-action="start">Start tone</button>
+          <button type="button" data-action="stop" disabled>Stop tone</button>
+        </div>
+        <p class="tone-hint">Audio unlocks on first interaction. Remember to keep your volume at a comfortable level!</p>
+      </section>
       <section class="cards" id="projects"></section>
     </main>
     <footer class="footer">Built with vanilla HTML, CSS, and JavaScript.</footer>
