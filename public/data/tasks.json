@@ -18,7 +18,7 @@
       "Implement landing page views for login and signup forms using vanilla JS or a lightweight framework.",
       "Connect the forms to Worker endpoints (/api/register and /api/login) via fetch calls.",
       "Add basic client-side validation, loading states, and inline error messaging.",
-      "Configure static asset deployment through Wrangler publish to verify end-to-end wiring."
+      "Configure static asset deployment through Wrangler deploy to verify end-to-end wiring."
     ]
   },
   {

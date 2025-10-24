@@ -56,9 +56,9 @@ npm install -g wrangler
 wrangler login
 wrangler kv:namespace create "PORTFOLIO_DATA"
 
-# Build and publish
+# Build and deploy
 npm run build
-wrangler publish
+wrangler deploy
 ```
 
 Update your `wrangler.toml` with:
