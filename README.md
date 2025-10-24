@@ -80,11 +80,14 @@ kv_namespaces = [
 ---
 
 ## 📦 Roadmap
-- [ ] Add form validation and spam protection  
-- [ ] Create JSON-based content manager  
-- [ ] Build automation for project sync  
-- [ ] Include analytics endpoint  
-- [ ] Add dark/light theme toggle  
+- [ ] Add form validation and spam protection
+- [ ] Create JSON-based content manager
+- [ ] Build automation for project sync
+- [ ] Include analytics endpoint
+- [ ] Add dark/light theme toggle
+
+## 📋 Deeds Build Plan
+- [View the 10-day sprint task export](public/data/tasks.json) — JSON reference for each day’s scope and implementation steps.
 
 ---
 
