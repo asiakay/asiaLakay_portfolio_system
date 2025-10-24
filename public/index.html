@@ -3,18 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>asiaLakay Portfolio System</title>
+    <title>Restoring Rhythm: A Proof of Concept for Institutional Trust</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body class="state-disorder">
     <main class="layout">
       <header class="hero">
-        <h1>asiaLakay Portfolio System</h1>
-        <p>A Cloudflare-native, content-driven portfolio starter.</p>
+        <p class="eyebrow">Interactive concept prototype</p>
+        <h1>Restoring Rhythm: A Proof of Concept for Institutional Trust</h1>
+        <p class="lede">
+          Explore how visible feedback loops transform an opaque institution from
+          discordant decision making into a collaborative, transparent rhythm.
+        </p>
+        <div class="hero__controls">
+          <button id="stateToggle" class="button">Switch to Restored Rhythm</button>
+          <button id="soundToggle" class="button button--ghost">
+            Start Soundscape
+          </button>
+        </div>
+        <p class="hint">Toggle the experience and listen as the system regains its beat.</p>
       </header>
-      <section class="cards" id="projects"></section>
+
+      <section class="overview">
+        <article class="panel">
+          <h2>Prototype Overview</h2>
+          <p>
+            The demo juxtaposes two institutional states. In the closed system,
+            insights stall in silos and people react to rumors. In the open
+            system, feedback checkpoints surface issues quickly and align teams
+            around shared timing cues.
+          </p>
+          <ul class="highlights">
+            <li>Compare communication patterns side by side.</li>
+            <li>Watch data flow lines synchronize as transparency improves.</li>
+            <li>Listen to rhythm cues that reflect institutional health.</li>
+          </ul>
+        </article>
+        <article class="panel panel--focus">
+          <h3>Inputs powering the story</h3>
+          <dl class="inputs">
+            <div>
+              <dt>Anonymized email excerpts</dt>
+              <dd>Surface how unclear directives compound confusion.</dd>
+            </div>
+            <div>
+              <dt>Policy timeline snapshots</dt>
+              <dd>Show where bottlenecks block responses.</dd>
+            </div>
+            <div>
+              <dt>Feedback dashboards</dt>
+              <dd>Track how loops shrink the gap between signal and action.</dd>
+            </div>
+          </dl>
+        </article>
+      </section>
+
+      <section class="experience">
+        <div class="experience__header">
+          <h2 id="stateTitle"></h2>
+          <p id="stateDescription"></p>
+        </div>
+        <div class="experience__grid">
+          <article class="experience__card">
+            <h3>Signals on the ground</h3>
+            <ul id="signalList" class="experience__list"></ul>
+          </article>
+          <article class="experience__card">
+            <h3>Feedback touchpoints</h3>
+            <ul id="feedbackList" class="experience__list"></ul>
+          </article>
+          <article class="experience__card experience__card--wide">
+            <h3>Rhythm timeline</h3>
+            <div id="timeline" class="timeline" aria-live="polite"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="callout">
+        <h2>How to present this prototype</h2>
+        <ol>
+          <li>Open with the discordant state to highlight pain points and risk.</li>
+          <li>Toggle to the restored rhythm while narrating key transparency shifts.</li>
+          <li>
+            Close by mapping future experiments&mdash;which touchpoints to formalize,
+            what data to publish, and how to sustain responsive timing.
+          </li>
+        </ol>
+      </section>
     </main>
-    <footer class="footer">Built with vanilla HTML, CSS, and JavaScript.</footer>
+    <footer class="footer">
+      Built for the &ldquo;Restoring Rhythm&rdquo; concept using vanilla HTML, CSS, and
+      JavaScript.
+    </footer>
     <script src="./main.js" type="module"></script>
   </body>
 </html>
